@@ -72,10 +72,11 @@ class Stack:
             raise StackUnderflow()
         else:
             return ret
-            
+
 class Parser:
     """Parser module"""
     def __init__(self, commandDict, *, byLine = True, delim = '\n', argumentSeperator = " ", errorOnUnknownCommand = True):
+        """commandDict has format {"command":functionReference}"""
         self.byLine = byLine
         self.delim = delim
         self.argSep = argumentSeperator
